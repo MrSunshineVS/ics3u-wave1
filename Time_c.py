@@ -1,9 +1,9 @@
 from time import time
 
-nMinuteSecs = 60               # seconds in a minutes
-nHourSecs = 60 * nMinuteSecs   # seconds in an hour
-nDaySecs = 24 * nHourSecs      # seconds in a day
-nYearSecs = int(365.24 * nDaySecs)
+nMinuteSecs = 60                    # seconds in a minutes
+nHourSecs = 60 * nMinuteSecs        # seconds in an hour
+nDaySecs = 24 * nHourSecs           # seconds in a day
+nYearSecs = int(365.24 * nDaySecs)  # seconds in a year
 
 sMonthNames = ["Jan", "Feb", "Mar",
                "Apr", "May", "Jun",
@@ -17,6 +17,7 @@ nMonthDays = [31, 28, 31,
 
 sWeekNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
+# We only need seconds, so convert to int
 nTotalSeconds = int(time()) + 1970 * nYearSecs
 
 # Convert to Eastern Digital Time (from UTC)
