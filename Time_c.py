@@ -1,8 +1,5 @@
 from time import time
 
-def UpdateTimeString(timeString, value):
-    timeString
-
 nMinuteSecs = 60               # seconds in a minutes
 nHourSecs = 60 * nMinuteSecs   # seconds in an hour
 nDaySecs = 24 * nHourSecs      # seconds in a day
