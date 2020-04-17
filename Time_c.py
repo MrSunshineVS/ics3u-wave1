@@ -22,6 +22,10 @@ sWeekNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
 nTotalSeconds = int(time()) + 1970 * nYearSecs
 
+# Convert to Eastern Digital Time (from UTC)
+nTotalSeconds -= 4 * nHourSecs
+
+# Get weekday (epoch was on a thursday)
 nWeekDay = ((nTotalSeconds // nDaySecs) + 4) % 7
 
 # Get year value
@@ -55,9 +59,6 @@ nTotalSeconds -= nMinutes * nMinuteSecs
 
 # Get second value
 nSeconds = nTotalSeconds
-
-# Convert to Eastern Digital Time (EDT)
-nHours -= 4
 
 # Construct string
 datetime = "{0} {1} {2} {3:02d}:{4:02d}:{5:02d} {6}".format(sWeekNames[nWeekDay], sMonthNames[nMonths], nDays, nHours, nMinutes, nSeconds, nYears)
